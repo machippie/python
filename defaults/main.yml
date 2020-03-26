@@ -1,0 +1,33 @@
+# Standards: 0.1
+---
+# @var python_user:description: User to run user-specific commands
+# @var python_user:value: python_user | default(homebrew_user) | default(ansible_user_id)
+# python_user:
+
+# @var python_install:description: Install python via homebrew
+python_install: False
+
+# @var python_user_packages:description: List of packages to install for an user
+# @var python_user_packages:example: >
+# python_user_gems:
+#   - requests
+#   - name: httpie
+#     verison: 1.0.0
+#     state: latest
+# @end
+python_user_packages: []
+
+# @var python_global_packages:description: List of packages to install system-wide
+# @var python_global_packages:example: >
+# python_user_gems:
+#   - requests
+#   - name: httpie
+#     verison: 1.0.0
+#     state: latest
+# @end
+python_global_packages: []
+
+# @var python_pip_executable:description: Path to python pip executable
+python_pip_executable: /usr/bin/pip3
+
+...
